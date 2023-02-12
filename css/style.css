@@ -26,6 +26,19 @@ body{
     background-color: var(--body-color);
 }
 
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 250px;
+
+    padding: 10px 14px;
+
+    background-color: var(--sidebar-color);
+}
+
 /* Reusable CSS */
 
 .text{
@@ -45,15 +58,7 @@ body{
 /* Header */
 
 .sidebar-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    padding: 10px 14px;
-
-    width: 250px;
-
-    background-color: var(--sidebar-color);
+    margin-bottom: 30px;
 }
 
 .sidebar-header-wrapper{
@@ -74,6 +79,10 @@ body{
 .header-text .name, 
 .header-text .profession{
     font-weight: 600;
+}
+
+.header-text .name{
+    margin-top: menu;
 }
 
 .sidebar-header .sidebar-header-wrapper .toggle{
@@ -97,35 +106,22 @@ body{
     font-size: 22px;
 }
 
-/* Nav */
+/* Menu */
 
-.sidebar-nav{
-    position: fixed;
-    top: 65.2px;
-    left: 0;
-
-    padding: 10px 14px;
-
-    width: 250px;
-    height: 100vh;
-
-    background-color: var(--sidebar-color);
-}
-
-.nav-list{
+.menu-list{
     display: flex;
     flex-direction: column;
     row-gap: 10px;
 }
 
-.nav-list__item{
+.menu-list__item{
     display: flex;
     align-items: center;
 
     height: 50px;
 }
 
-.nav-list__item .icon{
+.menu-list__item .icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,28 +131,27 @@ body{
     font-size: 20px;
 }
 
-.nav-list__item .icon,
-.nav-list__item .text{
+.menu-list__item .icon,
+.menu-list__item .text{
     color: var(--text-color);
 }
 
-.nav-list__link{
+.menu-list__link{
     display: flex;
     align-items: center;
 
     height: 100%;
     width: 100%;
 
-    background-color: var(--primary-color-light);
     border-radius: 6px !important;
 }
 
-.nav-list__link:hover{
+.menu-list__link:hover{
     background-color: var(--primary-color);
 }
 
-.nav-list__link:hover .icon,
-.nav-list__link:hover .text{
+.menu-list__link:hover .icon,
+.menu-list__link:hover .text{
     color: var(--sidebar-color);
 }
 
