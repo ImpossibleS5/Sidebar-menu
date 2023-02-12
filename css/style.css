@@ -1,0 +1,113 @@
+@import url(reset.css); /* reset deafult browser styles */
+@import url(../fonts/poppins-v20-latin/stylesheet.css); /* font-family: 'Poppins', sans-serif; */
+
+:root{
+    /* Colors */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+
+    /* Transition */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+/* General */
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+/* Reusable CSS */
+
+.text{
+    font-size: 16px;
+    font-weight: 500;
+
+    color: var(--text-color);
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    min-width: 60px;
+}
+
+
+/* Header */
+
+.sidebar-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 10px 14px;
+
+    width: 250px;
+
+    background-color: var(--sidebar-color);
+}
+
+.sidebar-header-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo{
+    width: 40px;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name, 
+.header-text .profession{
+    font-weight: 600;
+}
+
+.sidebar-header .sidebar-header-wrapper .toggle{
+    position: absolute;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    
+    width: 25px;
+    height: 25px;
+    
+    background-color: var(--primary-color);
+    border-radius: 50%;
+
+    color: var(--sidebar-color);
+    font-size: 22px;
+}
+
+/* Nav */
+
+.sidebar-nav{
+    position: fixed;
+    top: 72.2px;
+    left: 0;
+
+    padding: 10px 14px;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: var(--sidebar-color);
+}
