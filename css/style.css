@@ -1,191 +1,247 @@
 @import url(reset.css); /* reset deafult browser styles */
 @import url(../fonts/poppins-v20-latin/stylesheet.css); /* font-family: 'Poppins', sans-serif; */
 
-:root{
-    /* Colors */
-    --body-color: #e4e9f7;
-    --sidebar-color: #fff;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #ddd;
-    --text-color: #707070;
+:root {
+  /* Colors */
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
 
-    /* Transition */
-    --tran-02: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.4s ease;
-    --tran-05: all 0.5s ease;
+  /* Transition */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
 }
 
 /* General */
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 
-    height: 100vh;
-    background-color: var(--body-color);
+  height: 100vh;
+  background-color: var(--body-color);
 }
 
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    height: 100%;
-    width: 250px;
+  height: 100%;
+  width: 250px;
 
-    padding: 10px 14px;
+  padding: 10px 14px;
 
-    background-color: var(--sidebar-color);
+  background-color: var(--sidebar-color);
 }
 
 /* Reusable CSS */
 
-.text{
-    font-size: 16px;
-    font-weight: 500;
+.text {
+  font-size: 16px;
+  font-weight: 500;
 
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
-.image{
-    display: flex;
-    align-items: center;
-    min-width: 60px;
+.image {
+  display: flex;
+  align-items: center;
+  min-width: 60px;
 }
-
 
 /* Header */
 
-.sidebar-header{
-    margin-bottom: 30px;
+.sidebar-header {
+  margin-bottom: 30px;
 }
 
-.sidebar-header-wrapper{
-    position: relative;
-    display: flex;
-    align-items: center;
+.sidebar-header-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.header-logo{
-    width: 40px;
+.header-logo {
+  width: 40px;
 }
 
-.header-text{
-    display: flex;
-    flex-direction: column;
+.header-text {
+  display: flex;
+  flex-direction: column;
 }
 
-.header-text .name, 
-.header-text .profession{
-    font-weight: 600;
+.header-text .name,
+.header-text .profession {
+  font-weight: 600;
 }
 
-.header-text .name{
-    padding-top: 2px;
+.header-text .name {
+  padding-top: 2px;
 }
 
-.sidebar-header .sidebar-header-wrapper .toggle{
-    position: absolute;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidebar-header .sidebar-header-wrapper .toggle {
+  position: absolute;
 
-    padding-top: 2px;
+  display: flex;
+  justify-content: center;
 
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    
-    width: 25px;
-    height: 25px;
-    
-    background-color: var(--primary-color);
-    border-radius: 50%;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
 
-    color: var(--sidebar-color);
-    font-size: 22px;
+  width: 25px;
+  height: 25px;
+
+  background-color: var(--primary-color);
+  border-radius: 50%;
+
+  color: var(--sidebar-color);
+  font-size: 22px;
 }
 
 /* Menu */
 
-.menu-list, 
-.bottom-list{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: calc(100% - 65px);
 }
 
-.menu-list__item, 
-.bottom-list__item{
-    display: flex;
-    align-items: center;
+.menu-list,
+.bottom-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
 
-    height: 50px;
+.menu-list__item,
+.bottom-list__item {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
 }
 
 .menu-list__item .icon,
-.bottom-list__item .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bottom-list__item .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    min-width: 60px;
+  min-width: 60px;
 
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .menu-list__item .icon,
 .menu-list__item .text,
-
 .bottom-list__item .icon,
-.bottom-list__item .text{
-    color: var(--text-color);
+.bottom-list__item .text {
+  color: var(--text-color);
 }
 
 .menu-list__link,
-.bottom-list__link{
-    display: flex;
-    align-items: center;
+.bottom-list__link {
+  display: flex;
+  align-items: center;
 
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 
-    border-radius: 6px !important;
+  border-radius: 6px !important;
 
-    transition: var(--tran-03);
+  transition: var(--tran-03);
 }
 
 .menu-list__link:hover,
-.bottom-list__link:hover{
-    background-color: var(--primary-color);
+.bottom-list__link:hover {
+  background-color: var(--primary-color);
 }
 
 .menu-list__link:hover .icon,
 .menu-list__link:hover .text,
-
 .bottom-list__link:hover .icon,
-.bottom-list__link:hover .text{
-    color: var(--sidebar-color);
+.bottom-list__link:hover .text {
+  color: var(--sidebar-color);
 }
 
-.search-box{
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
+.search-box {
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
 }
 
-.search-box__link{
-    display: flex;
-    align-items: center;
+.search-box__link {
+  display: flex;
+  align-items: center;
 
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
-.search-box input{
-    height: 100%;
-    width: 100%;
-    border-radius: 6px;
-    background-color: var(--primary-color-light);
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+}
+
+/* Mode */
+
+.sidebar-bottom .moon-sun {
+  display: flex;
+  align-items: center;
+
+  width: 60px;
+  height: 50px;
+}
+
+.moon-sun .icon {
+  position: absolute;
+}
+
+.moon-sun .sun {
+  opacity: 0;
+}
+
+.sidebar-bottom .toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  min-width: 60px;
+}
+
+.toggle-switch .switch {
+  position: relative;
+
+  height: 22px;
+  width: 44px;
+
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+
+  cursor: pointer;
+}
+
+.switch::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  background-color: var(--sidebar-color);
 }
