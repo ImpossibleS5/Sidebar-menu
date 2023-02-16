@@ -60,6 +60,10 @@ body.dark {
   opacity: 0;
 }
 
+.sidebar.close .sidebar-menu .menu-list .menu-list__item .menu-text {
+  display: none;
+}
+
 /* Reusable CSS */
 
 .text {
