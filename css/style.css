@@ -246,6 +246,10 @@ body.dark .bottom-list__link:hover .text {
 
 /* Mode */
 
+.sidebar-bottom{
+  margin-bottom: 30px;
+}
+
 .sidebar-bottom .mode {
   position: relative;
 
