@@ -60,7 +60,11 @@ body.dark {
   opacity: 0;
 }
 
-.sidebar.close .sidebar-menu .menu-list .menu-list__item .menu-text {
+.sidebar.close .menu-text {
+  display: none;
+}
+
+.sidebar.close .bottom-text {
   display: none;
 }
 
