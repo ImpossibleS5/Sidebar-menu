@@ -13,8 +13,6 @@
   /* Transition */
   --tran-02: all 0.2s ease;
   --tran-03: all 0.3s ease;
-  --tran-04: all 0.4s ease;
-  --tran-05: all 0.5s ease;
 }
 
 /* General */
@@ -49,7 +47,7 @@ body.dark {
 
   background-color: var(--sidebar-color);
 
-  transition: var(--tran-05);
+  transition: var(--tran-03);
 }
 
 .sidebar.close {
@@ -105,6 +103,10 @@ body.dark {
   width: 40px;
 }
 
+body.dark .header-logo {
+  filter: invert(1);
+}
+
 .header-text {
   display: flex;
   flex-direction: column;
@@ -144,12 +146,12 @@ body.dark {
   transition: var(--tran-03);
 }
 
-.sidebar.close .sidebar-header .toggle{
-    transform: translateY(-50%);
+.sidebar.close .sidebar-header .toggle {
+  transform: translateY(-50%);
 }
 
 body.dark .sidebar-header .toggle {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 /* Menu */
@@ -254,7 +256,7 @@ body.dark .bottom-list__link:hover .text {
 
 /* Mode */
 
-.sidebar-bottom{
+.sidebar-bottom {
   margin-bottom: 30px;
 }
 
@@ -280,12 +282,12 @@ body.dark .bottom-list__link:hover .text {
   opacity: 0;
 }
 
-body.dark .moon-sun .sun{
-    opacity: 1;
+body.dark .moon-sun .sun {
+  opacity: 1;
 }
 
-body.dark .moon-sun .moon{
-    opacity: 0;
+body.dark .moon-sun .moon {
+  opacity: 0;
 }
 
 .sidebar-bottom .toggle-switch {
